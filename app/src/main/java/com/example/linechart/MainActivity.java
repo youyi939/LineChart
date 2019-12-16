@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         entryList = new ArrayList<>();
         init();
         start();
-
     }
 
     private void start() {
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         XAxis xAxis = lineChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM); //X轴设置显示位置在底部
         xAxis.setAxisMinimum(0f);                               // 设置X轴的最小值
-        xAxis.setAxisMaximum(500);                              // 设置X轴的最大值
+        xAxis.setAxisMaximum(50000);                              // 设置X轴的最大值
         xAxis.setLabelCount(20, false);              // 设置X轴的刻度数量，第二个参数表示是否平均分配
         xAxis.setGranularity(1f);                               // 设置X轴坐标之间的最小间隔
         lineChart.setVisibleXRangeMaximum(5);                   // 当前统计图表中最多在x轴坐标线上显示的总量
@@ -69,9 +68,6 @@ public class MainActivity extends AppCompatActivity {
         YAxis leftYAxis = lineChart.getAxisLeft();
         leftYAxis.setAxisMinimum(0f);
         leftYAxis.setAxisMaximum(100f);
-        leftYAxis.setGranularity(1f);
-        leftYAxis.setLabelCount(20);
-        leftYAxis.setEnabled(false);
         YAxis rightYAxis = lineChart.getAxisRight();
         rightYAxis.setAxisMaximum(100f);
         rightYAxis.setGranularity(1f);
